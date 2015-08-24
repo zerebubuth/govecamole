@@ -67,4 +67,3 @@ func (self *VecMap) LoadString(str string, strict bool, basename string) error {
 	}
 	return nil
 }
-

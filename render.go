@@ -15,7 +15,7 @@ import (
 
 //export goWriterFunc
 func goWriterFunc(ptr unsafe.Pointer, bytes *C.char, len C.int) C.int {
-	var writer *io.Writer = (*io.Writer)(ptr);
+	var writer *io.Writer = (*io.Writer)(ptr)
 	var b []byte = C.GoBytes(unsafe.Pointer(bytes), len)
 
 	n, err := (*writer).Write(b)
