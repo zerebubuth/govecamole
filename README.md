@@ -1,10 +1,10 @@
 # Govecamole
 
-A [Go](https://golang.org) wrapper around [vecamole](https://github.com/zerebubuth/vecamole), which is a C wrapper around a small part of [Mapnik](http://mapnik.org).
+A [Go](https://golang.org) wrapper library around [vecamole](https://github.com/zerebubuth/vecamole), which is a C wrapper around a small part of [Mapnik](http://mapnik.org).
 
 ## Motivation
 
-Just playing around with Go, but hoping to move in the direction of a nice, easy package for vector tile rendering and raster fallback.
+Just playing around with Go, but hoping to move in the direction of a nice, easy library for vector tile rendering and raster fallback.
 
 ## Installation
 
@@ -16,4 +16,4 @@ go get github.com/zerebubut/govecamole
 
 ## Functionality
 
-Currently outputs a single vector tile to `tile.pbf` containing a single node. Wow, much capability.
+Small wrapper API, which can currently load a Mapnik `Map` object, configure it and render vector tiles using it.
