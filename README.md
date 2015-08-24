@@ -11,7 +11,7 @@ Just playing around with Go, but hoping to move in the direction of a nice, easy
 First, install [vecamole](https://github.com/zerebubuth/vecamole). That's the only hard bit. From then, it should be as simple as:
 
 ```
-go get github.com/zerebubut/govecamole
+go get github.com/zerebubuth/govecamole
 ```
 
 ## Functionality
