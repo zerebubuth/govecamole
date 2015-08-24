@@ -1,4 +1,4 @@
-package vecmap
+package govecamole
 
 /*
 #cgo pkg-config: vecamole
