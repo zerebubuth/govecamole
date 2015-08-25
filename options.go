@@ -27,5 +27,5 @@ func (self *Options) Close() {
 	if status != 0 {
 		panic("Unable to deallocate vecamole options object. This might indicate memory corruption.")
 	}
-
+	self.ptr = nil
 }

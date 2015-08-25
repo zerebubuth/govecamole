@@ -28,7 +28,7 @@ func (self *Request) Close() {
 	if status != 0 {
 		panic("Unable to deallocate vecamole request object. This might indicate memory corruption.")
 	}
-
+	self.ptr = nil
 }
 
 func (self *Request) SetBufferSize(size int) {

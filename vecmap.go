@@ -30,6 +30,7 @@ func (self *VecMap) Close() {
 	if status != 0 {
 		panic("Unable to deallocate vecamole map object. This might indicate memory corruption.")
 	}
+	self.ptr = nil
 }
 
 func (self *VecMap) RegisterFonts(dir string, recurse bool) error {
