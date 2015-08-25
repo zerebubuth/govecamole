@@ -67,3 +67,22 @@ func (self *VecMap) LoadString(str string, strict bool, basename string) error {
 	}
 	return nil
 }
+
+func (self *VecMap) LoadFile(filename string, strict bool, basename string) error {
+	var cfilename = C.CString(filename)
+	defer C.free(unsafe.Pointer(cfilename))
+
+	var cbasename = C.CString(basename)
+	defer C.free(unsafe.Pointer(cbasename))
+
+	var cstrict C.int = 0
+	if strict {
+		cstrict = 1
+	}
+
+	status := C.vecamole_map_load_file(self.ptr, cfilename, cstrict, cbasename)
+	if status != 0 {
+		return fmt.Errorf("Unable to load map from file %v.", filename)
+	}
+	return nil
+}
